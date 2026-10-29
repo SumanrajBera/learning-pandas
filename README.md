@@ -36,11 +36,11 @@ data = {
 }
 
 df = pd.DataFrame(data)
-
-# Output
-# 	Name	Marks	Subject
-# 0	Anu	    50	Maths
-# 1	Kanan	40	Science
-# 2	Amit	60	History
 ```
+**Output:**
+|     | Name  | Marks | Subject |
+| --- | ----- | ----- | ------- |
+| 0   | Anu   | 50    | Maths   |
+| 1   | Kanan | 40    | Science |
+| 2   | Amit  | 60    | History |
 - We can pass extra parameters such as `columns = []` in the square bracket we can mention names to name a 2D array columns or for selecting which columns to be shown if already named.
