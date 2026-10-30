@@ -46,8 +46,8 @@ df = pd.DataFrame(data)
 - We can pass extra parameters such as `columns = []` in the square bracket we can mention names to name a 2D array columns or for selecting which columns to be shown if already named.
 
 ### Inspecting Data
-- head(n) → first n rows (default is all rows)
-- tail(n) → last n rows (default is all rows)
+- head(n) → first n rows (default is 5 rows from start)
+- tail(n) → last n rows (default is 5 rows from end)
 - info() → columns, non-null counts, and dtypes
 - shape → (rows, columns)
 - dtypes → data type of each column
