@@ -75,8 +75,11 @@ df = pd.DataFrame(data)
 ### Handling Missing Data
 - **isna()** / **isnull()** → detect missing values (returns True/False)
 ```py
-# To sum how many null values are present in each row for a label
+# To sum how many null values are present column-wise
 dataFrame.isna().sum()
+
+# Here, axis = 0 means for column-wise "travel vertically down the rows."
+# axis = 1 means for row-wise "travel horizontally across the columns."
 ```
 - **dropna()** → remove missing values (rows/columns)
 - **fillna()** → replace missing values with a given value or method (e.g., forward fill)
