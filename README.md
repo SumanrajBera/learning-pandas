@@ -69,3 +69,14 @@ df = pd.DataFrame(data)
 - Rename columns → df.rename(columns={'old':'new'}, inplace=False)
 - Set a column as index → df.set_index('column_name', inplace=False)
 - Reset index → df.reset_index(inplace=False) If you don't use inplace=True, remember to assign the result back to a variable.
+  
+## Data Cleaning and Preparation
+
+### Handling Missing Data
+- **isna()** / **isnull()** → detect missing values (returns True/False)
+```py
+# To sum how many null values are present in each row for a label
+dataFrame.isna().sum()
+```
+- **dropna()** → remove missing values (rows/columns)
+- **fillna()** → replace missing values with a given value or method (e.g., forward fill)
