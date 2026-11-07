@@ -83,3 +83,10 @@ dataFrame.isna().sum()
 ```
 - **dropna()** → remove missing values (rows/columns)
 - **fillna()** → replace missing values with a given value or method (e.g., forward fill)
+
+### Changing datatype
+
+We can make use of `astype()` to change a column's datatype to our desired datatype
+```py
+df['Column_Name'] = df['Column_Name'].astype(datatype)
+```
