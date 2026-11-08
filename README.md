@@ -90,3 +90,14 @@ We can make use of `astype()` to change a column's datatype to our desired datat
 ```py
 df['Column_Name'] = df['Column_Name'].astype(datatype)
 ```
+
+### Replacing values
+
+We can use `replace()` to substitute specific values or patterns.
+```py
+# For single values
+c['Name'] = c['Name'].replace("Bob", "Robert")
+
+# For multiple value
+c['Age'] = c['Age'].replace({25:20, 35:40})
+```
