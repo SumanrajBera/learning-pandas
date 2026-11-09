@@ -101,3 +101,18 @@ c['Name'] = c['Name'].replace("Bob", "Robert")
 # For multiple value
 c['Age'] = c['Age'].replace({25:20, 35:40})
 ```
+
+### Dropping value by row or column
+- drop(labels or index, axis=0) → drop rows by index or labels.
+```py
+# Row with index 1 remove
+print(df.drop(1))
+# Drop multiple row by index value
+print(df.drop([0,1]))
+```
+- drop(labels, axis=1) → drop columns by name.
+```py
+# Age column remove
+df = df.drop("Age", axis=1)
+```
+- Use `inplace=True` if you want to modify the DataFrame directly.
