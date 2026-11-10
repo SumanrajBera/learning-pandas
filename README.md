@@ -116,3 +116,19 @@ print(df.drop([0,1]))
 df = df.drop("Age", axis=1)
 ```
 - Use `inplace=True` if you want to modify the DataFrame directly.
+
+### Detecting & Removing Duplicates
+- `duplicated()` → returns a Boolean Series marking duplicate rows.
+- `drop_duplicates()` → remove duplicate rows.
+```py
+# Normally deletes only duplicate values only
+print(df.drop_duplicates())
+
+# In the subset we can give column names or labels for dropping duplicates based on that
+print(df.drop_duplicates(subset=["Age"]))
+
+# For deleting all except first occurencnce use "first" 
+# For deleting all except last occurencnce use "last" 
+# For deleting all duplicated values along with original use "False" 
+print(df.drop_duplicates(keep="last"))
+```
