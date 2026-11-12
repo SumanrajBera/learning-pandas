@@ -132,3 +132,21 @@ print(df.drop_duplicates(subset=["Age"]))
 # For deleting all duplicated values along with original use "False" 
 print(df.drop_duplicates(keep="last"))
 ```
+
+## Data selection & Filtering
+
+### Boolean Indexing & Conditional Selection
+- Use comparison operators to build conditions (e.g., df['col'] > 50).
+- Pass the condition inside df[...] to get matching rows.
+```py
+print(df["Age"] > 30) # Will give the column with boolean values
+# To get the rows of data
+df[df["Age"] > 30]
+```
+- Combine multiple conditions with & (AND), | (OR), and ~ (NOT).
+- Parentheses are required when combining conditions.
+```py
+# We can combine condition using logical operators &, | and ~
+# Paranthesis is a must for combining logical operators
+df[(df["Age"] > 30) & (df["City"] == "Mumbai")]
+```
