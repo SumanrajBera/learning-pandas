@@ -150,3 +150,18 @@ df[df["Age"] > 30]
 # Paranthesis is a must for combining logical operators
 df[(df["Age"] > 30) & (df["City"] == "Mumbai")]
 ```
+
+### Using `query` for conditional selection
+- query() allows filtering rows with a string expression.
+- It's concise and readable for complex conditions.
+```py
+# Its similar to conditional filtering but done in strings
+df.query("Age > 30 and City == 'Bangalore'")
+```
+- Variables can be passed using the `@` symbol.
+```py
+# we can make use of variables here using @
+salaryStart = 40000
+salaryEnd = 60000
+df.query("Salary > @salaryStart and Salary < @salaryEnd")
+```
