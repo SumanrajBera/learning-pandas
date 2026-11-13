@@ -165,3 +165,9 @@ salaryStart = 40000
 salaryEnd = 60000
 df.query("Salary > @salaryStart and Salary < @salaryEnd")
 ```
+
+### String Operations on COlumns
+- Use the .str accessor for vectorized string methods.
+- Common methods: `contains`, `replace`, `startswith`, `endswith`, `lower`, `upper`.
+- Useful for cleaning or filtering text data.
+*Note*: Here we can pass a boolean for `case` to ignore casing when filtering with supported methods.
