@@ -171,3 +171,21 @@ df.query("Salary > @salaryStart and Salary < @salaryEnd")
 - Common methods: `contains`, `replace`, `startswith`, `endswith`, `lower`, `upper`.
 - Useful for cleaning or filtering text data.
 *Note*: Here we can pass a boolean for `case` to ignore casing when filtering with supported methods.
+
+## Data Organising and Summary
+
+### Sorting Data
+- Use `sort_values(by='col/label name')` to sort by column values.
+```py
+df.sort_values(by='Price')
+```
+- Use `ascending=False` for descending order.
+```py
+df.sort_values(by='Price', ascending=False)
+```
+- Sort by multiple columns by passing a list.
+```py
+df.sort_values(by=['Product','Price'])
+```
+*Note*: Here we can define ascending with the same idx with True or False to mention how they should be sorted
+- `sort_index()` sorts by row or column index.
