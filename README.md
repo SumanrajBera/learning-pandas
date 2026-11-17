@@ -189,3 +189,8 @@ df.sort_values(by=['Product','Price'])
 ```
 *Note*: Here we can define ascending with the same idx with True or False to mention how they should be sorted
 - `sort_index()` sorts by row or column index.
+
+### Descriptive Statistics
+- `mean()`, `median()`, `mode()` for central tendency.
+- `std()` for standard deviation.
+- `describe()` for a summary of stats (count, mean, std, min, quartiles, max).
