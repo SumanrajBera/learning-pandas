@@ -194,3 +194,12 @@ df.sort_values(by=['Product','Price'])
 - `mean()`, `median()`, `mode()` for central tendency.
 - `std()` for standard deviation.
 - `describe()` for a summary of stats (count, mean, std, min, quartiles, max).
+
+### Counting Values
+- `value_counts()` shows the frequency of unique values in a Series.
+- Use `normalize=True` to see percentages instead of counts.
+
+### Correlation & Covariance
+- `corr()` computes correlation between numeric columns.
+- `cov()` computes covariance.
+- Correlation values range from -1 (negative) to +1 (positive).
