@@ -203,3 +203,19 @@ df.sort_values(by=['Product','Price'])
 - `corr()` computes correlation between numeric columns.
 - `cov()` computes covariance.
 - Correlation values range from -1 (negative) to +1 (positive).
+
+### Concept of Split–Apply–Combine
+- Split the data into groups based on some criteria.
+- Apply a function (e.g., sum, mean) to each group.
+- Combine the results into a new DataFrame or Series.
+```py
+df[df["Department"] == "IT"]["Salary"].agg(["mean", "min", "max"])
+```
+
+### Using groupby() with Aggregation Functions
+- Use `groupby('col').mean()` or other functions like sum, count, min, max.
+- You can also use `agg()` to pass multiple functions at once.
+```py
+# Will give us min, max and sum accross
+df.groupby("Department")["Salary"].agg([sum, min, max, "mean"])
+```
