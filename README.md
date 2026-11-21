@@ -227,3 +227,14 @@ df.groupby("Department")["Salary"].agg([sum, min, max, "mean"])
 # Example usage of multiple aggregation
 df.groupby("Department").agg({"Salary": "mean", "Age": ["min", "max"]})
 ```
+
+## 4. Pivot Tables & Crosstab
+- `pivot_table()` summarizes data like Excel pivot tables.
+```py
+df.pivot_table(values="passengers",index="YearGroup", columns="month", aggfunc="sum")
+```
+- `crosstab()` shows frequency counts of combinations of factors.
+```py
+crosstab_result = pd.crosstab(df["Department"], df["AgeGroup"])
+```
+- Both are powerful for summarizing and comparing groups.
