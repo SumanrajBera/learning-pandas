@@ -219,3 +219,11 @@ df[df["Department"] == "IT"]["Salary"].agg(["mean", "min", "max"])
 # Will give us min, max and sum accross
 df.groupby("Department")["Salary"].agg([sum, min, max, "mean"])
 ```
+
+### Multiple Aggregations on Different Columns
+- With `agg()`, you can specify different functions for each column.
+- Example: `df.groupby('Dept').agg({'Salary':'mean', 'Age':'max'})`.
+```py
+# Example usage of multiple aggregation
+df.groupby("Department").agg({"Salary": "mean", "Age": ["min", "max"]})
+```
