@@ -238,3 +238,10 @@ df.pivot_table(values="passengers",index="YearGroup", columns="month", aggfunc="
 crosstab_result = pd.crosstab(df["Department"], df["AgeGroup"])
 ```
 - Both are powerful for summarizing and comparing groups.
+
+## Merging, Joining and Concatenation
+
+### Using `concat()` for Stacking Data
+- `pd.concat()` combines DataFrames vertically (rows) or horizontally (columns).
+- Use `axis=0` for vertical stacking (default), `axis=1` for horizontal.
+- `ignore_index=True` can reset the index after concatenation.
