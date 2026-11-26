@@ -245,3 +245,8 @@ crosstab_result = pd.crosstab(df["Department"], df["AgeGroup"])
 - `pd.concat()` combines DataFrames vertically (rows) or horizontally (columns).
 - Use `axis=0` for vertical stacking (default), `axis=1` for horizontal.
 - `ignore_index=True` can reset the index after concatenation.
+
+### Using `merge()` for SQL-Style Joins
+- `merge()` is similar to SQL joins.
+- Specify `on` or `left_on`/`right_on` to choose key columns.
+- Join types: `inner` (default), `left`, `right`, `outer`.
