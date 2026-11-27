@@ -250,3 +250,8 @@ crosstab_result = pd.crosstab(df["Department"], df["AgeGroup"])
 - `merge()` is similar to SQL joins.
 - Specify `on` or `left_on`/`right_on` to choose key columns.
 - Join types: `inner` (default), `left`, `right`, `outer`.
+
+### Using `join()` with Index Alignment
+- `join()` joins DataFrames on their index or on a key column.
+- By default, joins on index; can specify `on='col'`.
+- Useful for adding columns to an existing DataFrame.
